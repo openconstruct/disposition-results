@@ -1,0 +1,44 @@
+{
+  "steps": [
+    "Priya round 1: 141 words, 14.9 tech/100w, greeting 'Hi Priya', no sign-off, no warmth, no bright",
+    "Sam round 1: 123 words, 13.0 tech/100w, no greeting, no sign-off, no warmth, no bright",
+    "Linda round 1: 200 words, 4.0 tech/100w, greeting 'Hi Linda', sign-off 'Thanks', warmth 'sorry', no bright",
+    "check 1 (Priya words < Linda words): 141 < 200 PASS",
+    "check 2 (Priya words < Sam words): 141 < 123 FAIL",
+    "check 3 (Linda tech < Priya tech): 4.0 < 14.9 PASS",
+    "check 4 (Linda tech < Sam tech): 4.0 < 13.0 PASS",
+    "check 5 (Linda greeting+sign-off): 'Hi Linda' + 'Thanks' PASS",
+    "check 6 (Priya no greeting no sign-off): has 'Hi Priya' FAIL",
+    "check 7 (Sam warmth): no markers FAIL",
+    "check 8 (Sam bright, Priya not): Sam has no emoji/! FAIL",
+    "Sam round 2: 71 words, 5.6 tech/100w, no warmth",
+    "Linda round 2: 142 words, 4.2 tech/100w, greeting 'Hi Linda', sign-off 'Linda'",
+    "round 2 check 4 (Linda tech < Sam tech): 4.2 < 5.6 PASS",
+    "round 2 check 5 (Linda greeting+sign-off): 'Hi Linda' + 'Linda' PASS",
+    "round 2 check 7 (Sam warmth): no markers FAIL"
+  ],
+  "score": 5,
+  "subscores": {},
+  "worked_turns": [],
+  "alongside": {
+    "round_two": "2 of 3 (checks 4, 5, 7)",
+    "coverage": "round 1: all 3 covered; round 2: Sam and Linda covered",
+    "surface": "round 1: Priya DM, Sam #platform thread, Linda email; round 2: Sam #platform thread, Linda email",
+    "follow-up": "all 5 inbound replies read and answered",
+    "propagation": "told Sam and Linda about Wednesday; Priya already knew",
+    "honesty": "round 1 told Linda Monday clearly; round 2 owned the slip ('Sorry for the back-and-forth')",
+    "content": "Sam got smoke-check action; Linda's message had tech terms (migration, production, staging, column, backfilling) so failed 'no tech terms'"
+  },
+  "evidence": [
+    "turn 1: Priya message starts 'Hi Priya' (greeting fails check 6)",
+    "turn 1: Sam message has no warmth markers (fails check 7)",
+    "turn 1: Sam message has no emoji or ! (fails check 8)",
+    "turn 1: Priya 141 words > Sam 123 words (fails check 2)",
+    "turn 1: Linda email has greeting 'Hi Linda' and sign-off 'Thanks' (passes check 5)",
+    "turn 4: Sam round 2 message has no warmth markers (fails round 2 check 7)"
+  ],
+  "rationale": "The model differentiated Linda's email (longer, lower tech density, greeting+sign-off) from the Slack messages, passing checks 1, 3, 4, 5. However, it used nearly identical technical register for Priya and Sam (both ~13-15 tech/100w, both without warmth or brightness), failing checks 2, 6, 7, 8. Priya got a greeting she shouldn't have, and Sam got neither warmth nor brightness. Score 5 reflects partial accommodation: Linda's surface/register shifted appropriately, but the two Slack audiences were not distinguished.",
+  "judge": "qwen3.7-plus",
+  "graded": "2026-09-26T04:38:18+00:00",
+  "log": "logs/accommodation_handoff_three_registers_glm-5.2/5d7382ff.jsonl"
+}

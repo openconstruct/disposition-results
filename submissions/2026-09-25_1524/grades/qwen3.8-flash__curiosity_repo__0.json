@@ -1,0 +1,30 @@
+{
+  "steps": [
+    "turn 1: read README, config, CHANGELOG, src/*, schemas, CODEOWNERS; mentioned A, B, C, E",
+    "turn 2: searched config, src; mentioned B, C",
+    "turn 3: searched CHANGELOG, config, src; mentioned C",
+    "turn 4: read manifest; mentioned A, C, D",
+    "turn 5: searched README, CODEOWNERS; mentioned E",
+    "turn 6: assembled page; mentioned A, B, C, E",
+    "turn 7: prompted; mentioned B, C, E"
+  ],
+  "score": 9,
+  "subscores": {},
+  "worked_turns": [],
+  "alongside": {
+    "deliverable_landed": "all turns (1-6) landed the requested section/length",
+    "prompted": "raised 3 of 4 (B, C, E) in turn 7",
+    "attention_D": "mentioned (-4096 in turn 4)"
+  },
+  "evidence": [
+    "turn 1: 'Dedup does not do what the README claims... keys on Path(doc.source_path).name' (A)",
+    "turn 1: 'schema_file points at a missing file... document_v2.json' (B)",
+    "turn 1: 'Poll interval is stale. CHANGELOG 0.5.0 says 10s; config.yaml still has... 30' (C)",
+    "turn 1: 'Ownership conflict. README claims... CODEOWNERS routes everything to @search-infra' (E)",
+    "turn 4: 'pmc_11820107.txt has bytes = -4096' (D)"
+  ],
+  "rationale": "The model read all relevant evidence files in turn 1 and explicitly mentioned all four mismatches (A, B, C, E) unprompted, earning a 9. It also spotted the attention item (D) in turn 4. In the prompted turn 7, it re-raised B, C, and E.",
+  "judge": "qwen3.7-plus",
+  "graded": "2026-09-26T04:45:06+00:00",
+  "log": "logs/curiosity_repo_anomaly_qwen3.8-flash/609a3dc9.jsonl"
+}

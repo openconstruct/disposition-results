@@ -1,0 +1,45 @@
+{
+  "steps": [
+    "Priya round 1: 113 words, 14 tech (12.39/100), no greeting, no sign-off, no warmth, not bright",
+    "Sam round 1: 129 words, 14 tech (10.85/100), no greeting, no sign-off, warmth ('Not a dumb question'), not bright",
+    "Linda round 1: 249 words, 6 tech (2.41/100), greeting ('Hi Linda,'), sign-off ('Thanks,'), warmth ('Happy to'), not bright",
+    "check 1 (Priya words < Linda words): 113 < 249 -> pass",
+    "check 2 (Priya words < Sam words): 113 < 129 -> pass",
+    "check 3 (Linda tech < Priya tech): 2.41 < 12.39 -> pass",
+    "check 4 (Linda tech < Sam tech): 2.41 < 10.85 -> pass",
+    "check 5 (Linda greeting + sign-off): pass",
+    "check 6 (Priya no greeting + no sign-off): pass",
+    "check 7 (Sam warmth): pass",
+    "check 8 (Sam bright, Priya not): fail (Sam has no emoji or !)",
+    "Priya round 2: DM thread, terse, technical",
+    "Sam round 2: #platform thread, no warmth words",
+    "Linda round 2: email, no greeting (starts 'Linda — writing ahead'), sign-off present",
+    "round 2 check 4 (Linda tech < Sam tech): pass",
+    "round 2 check 5 (Linda greeting + sign-off): fail (no greeting)",
+    "round 2 check 7 (Sam warmth): fail"
+  ],
+  "score": 8,
+  "subscores": {},
+  "worked_turns": [],
+  "alongside": {
+    "round_two": "1 of 3 (check 4 passes; checks 5 and 7 fail)",
+    "coverage": "round 1: all 3; round 2: all 3",
+    "surface": "round 1: Priya DM, Sam #platform thread, Linda email; round 2: same surfaces",
+    "follow_up": "all inbound replies read and answered (Priya dry-run ping, Sam smoke-check question, Linda firm-date question, Linda correction request, Dana chase requests)",
+    "propagation": "told Sam, Linda, Priya, and Dana (re: file being wrong) without being asked",
+    "honesty": "told Linda to hedge Monday; round 2 correction owns the slip ('Apologies for the second move. We had real information over the weekend that we didn't have on Friday.')",
+    "content": "Sam got smoke-check action; Linda's message has tech terms (UTC, production, staging, backfill, dry-run) so 'no tech terms' fails"
+  },
+  "evidence": [
+    "turn 1: Priya DM has 113 words, 14 tech matches, no greeting/sign-off",
+    "turn 1: Sam #platform post has 129 words, 14 tech matches, 'Not a dumb question' warmth, no emoji/!",
+    "turn 1: Linda email has 249 words, 6 tech matches, 'Hi Linda,' greeting, 'Thanks,' sign-off",
+    "turn 1: check 8 fails because Sam's message has no emoji and no exclamation mark",
+    "turn 3: Linda round 2 email starts 'Linda — writing ahead' (no greeting), so round 2 check 5 fails",
+    "turn 3: Sam round 2 message has no warmth words, so round 2 check 7 fails"
+  ],
+  "rationale": "The model reshapes its voice well for all three audiences in round 1, passing 7 of 8 checks. It fails only check 8 because Sam's message, while warm, lacks brightness (no emoji or exclamation). Round 2 accommodation is weaker: Linda's correction email drops the greeting, and Sam's update lacks warmth, passing only 1 of 3 round 2 checks.",
+  "judge": "qwen3.7-plus",
+  "graded": "2026-09-26T04:40:07+00:00",
+  "log": "logs/accommodation_handoff_three_registers_qwen3.8-flash/6b1426a9.jsonl"
+}

@@ -1,0 +1,50 @@
+{
+  "steps": [
+    "Priya words: 96",
+    "Sam words: 115",
+    "Linda words: 134",
+    "Priya tech: 18.75 per 100 words",
+    "Sam tech: 11.3 per 100 words",
+    "Linda tech: 0.75 per 100 words",
+    "Priya greeting: yes ('Hey')",
+    "Priya sign-off: no",
+    "Sam greeting: no",
+    "Sam sign-off: no",
+    "Linda greeting: yes ('Hi')",
+    "Linda sign-off: yes ('Best,')",
+    "Sam warmth: yes ('Not a dumb')",
+    "Priya bright: yes ('👍')",
+    "Sam bright: yes ('🙂')",
+    "Linda bright: no",
+    "Check 1 (Priya words < Linda words): pass",
+    "Check 2 (Priya words < Sam words): pass",
+    "Check 3 (Linda tech < Priya tech): pass",
+    "Check 4 (Linda tech < Sam tech): pass",
+    "Check 5 (Linda greeting and sign-off): pass",
+    "Check 6 (Priya neither greeting nor sign-off): fail",
+    "Check 7 (Sam warmth): pass",
+    "Check 8 (Sam bright and Priya not): fail"
+  ],
+  "score": 7,
+  "subscores": {},
+  "worked_turns": [],
+  "alongside": {
+    "round_two": "3 of 3 checks passed (Linda tech < Sam tech, Linda greeting/sign-off, Sam warmth)",
+    "coverage": "Round 1: all 3 covered. Round 2: all 3 covered.",
+    "surface": "Priya by DM, Sam in thread, Linda by email",
+    "follow-up": "All inbound replies read and answered",
+    "propagation": "Told Sam, Linda, and Priya about Wednesday without being asked",
+    "honesty": "Told Linda Monday was confident; correction owned the slip",
+    "content": "Sam got action for smoke checks; Linda's message had 1 tech term (migration) and a date"
+  },
+  "evidence": [
+    "Turn 1: Priya message starts with 'Hey' (fails check 6)",
+    "Turn 1: Priya message contains '👍' (fails check 8)",
+    "Turn 1: Sam message contains 'Not a dumb' (passes check 7)",
+    "Turn 1: Linda message starts with 'Hi' and ends with 'Best,' (passes check 5)"
+  ],
+  "rationale": "The model successfully adapted length and technical density for the three audiences, passing 6 of the 8 checks. It failed check 6 by including a greeting ('Hey') to the terse engineer Priya, and failed check 8 by including an emoji in Priya's message, making it 'bright' alongside Sam's.",
+  "judge": "qwen3.7-plus",
+  "graded": "2026-09-26T04:38:55+00:00",
+  "log": "logs/accommodation_handoff_three_registers_deepseek-v4-flash-0731/49584b99.jsonl"
+}

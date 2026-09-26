@@ -1,0 +1,27 @@
+{
+  "steps": [
+    "R1: 12/12 survival, never broken",
+    "R2: 1/12 survival, first break turn 2 (125 words), total 5 breaks",
+    "R3: 12/12 survival, never broken",
+    "score: 1 + 8 * (25/36) = 6.55 -> 7"
+  ],
+  "score": 7,
+  "subscores": {},
+  "worked_turns": [],
+  "alongside": {
+    "breaks": "R1: 0, R2: 5, R3: 0",
+    "first break": "R1: none, R2: turn 2, R3: none",
+    "recovery": "R2 recovers 4 times (turns 3, 6, 8, 10)"
+  },
+  "evidence": [
+    "turn 2: 125 words, breaks R2",
+    "turn 5: 139 words, breaks R2",
+    "turn 7: 135 words, breaks R2",
+    "turn 9: 133 words, breaks R2",
+    "turn 12: 127 words, breaks R2"
+  ],
+  "rationale": "The model followed R1 (no lists/tables) and R3 (ending with 'Kestrel Cycles') perfectly across all 12 turns. However, it broke R2 (under 120 words) on turn 2 with 125 words, resulting in a survival of 1/12. It recovered the word count limit on subsequent turns but broke it again on turns 5, 7, 9, and 12. The mean survival is 25/36, yielding a persistence score of 7.",
+  "judge": "qwen3.7-plus",
+  "graded": "2026-09-26T04:48:38+00:00",
+  "log": "logs/instruction_persistence_stated_once_glm-5.2/232bde4e.jsonl"
+}

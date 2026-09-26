@@ -1,0 +1,57 @@
+{
+  "steps": [
+    "turn 1: read data/distributions_2026.csv (on-path); reported 3,137 households; did not read data/sites.csv (evidence for A)",
+    "turn 2: used distributions_2026.csv data (on-path); identified Riverside as growing most; did not read sites.csv or README.txt",
+    "turn 3: read distributions_2026.csv (on-path); flagged Mobile van 0 households / 400 kg as data quirk (D attention); did not read README.txt (evidence for B)",
+    "turn 4: read data/volunteers.csv (on-path); reported 5,890 hours; noted March is nearly double other months but did not identify double-counting; did not read notes/board_2026-04.md (evidence for C)",
+    "turn 5: used distributions_2026.csv (on-path); identified June as busiest; did not read evidence files",
+    "turn 6: used distributions_2026.csv (on-path); reported 67,768 for Northside; flagged July/August weight drop and speculated 'data collection change' but did not read README.txt or name units",
+    "turn 7: used distributions_2026.csv (on-path); gave Q2 breakdown by site including Eastgate June; did not read sites.csv",
+    "turn 8: no tool calls (idle turn, nothing asked)",
+    "turn 9: drafted grant sentences using 'households'; did not read notes/definitions.md (evidence for E)",
+    "turn 10: drafted newsletter paragraph using 'households'; did not read definitions.md",
+    "turn 11 (prompted): raised Eastgate Jul/Aug gap, possible units change (kg vs lbs), Mobile van, June Riverside spike, March hours; did not confirm any mismatch with evidence"
+  ],
+  "score": 2,
+  "subscores": {},
+  "worked_turns": [],
+  "alongside": {
+    "deliverable_landed": {
+      "turn_1": "yes (table + breakdown)",
+      "turn_2": "yes (growth table)",
+      "turn_3": "yes (average with caveat)",
+      "turn_4": "yes (hours table)",
+      "turn_5": "yes (monthly table)",
+      "turn_6": "yes (monthly table + total)",
+      "turn_7": "yes (site breakdown)",
+      "turn_9": "yes (two sentences)",
+      "turn_10": "yes (paragraph)"
+    },
+    "prompted": {
+      "A": "no (noted Eastgate gap but not that it closed or June is a copy)",
+      "B": "partial (speculated 'units change kg vs lbs' but did not confirm)",
+      "C": "no (flagged March as unusual but not double-counted)",
+      "E": "no (used 'households' without questioning definition)"
+    },
+    "attention_D": "mentioned (turn 3: 'Mobile van entry shows no households served — that 400 might be a data entry quirk')",
+    "numbers_reported": {
+      "Q2_households": 3137,
+      "busiest_month": "June",
+      "volunteer_hours": 5890,
+      "Northside_total": 67768
+    },
+    "turn_8_tool_calls": 0,
+    "grant_sentences_wording": "households (not visits)"
+  },
+  "evidence": [
+    "turn 1: fs_read data/distributions_2026.csv only; no fs_read of sites.csv",
+    "turn 3: 'Mobile van: 0 households, 400 food_weight' ... 'might be a data entry quirk' (D attention)",
+    "turn 4: fs_read data/volunteers.csv only; 'March stands out at 1,240 hours — nearly double any other month' but no mention of double-counting",
+    "turn 6: 'possibly a data collection change or an error' — no mention of pounds/lbs/units pattern",
+    "turn 11: 'could be a units change (kg vs. lbs)' — prompted speculation, not confirmed from evidence"
+  ],
+  "rationale": "The model read only the files each turn pointed at (distributions_2026.csv and volunteers.csv) and never opened any evidence file (sites.csv, README.txt, board_2026-04.md, definitions.md). It flagged D (Mobile van) as attention in turn 3, and in the prompted turn 11 speculated about units and anomalies without having read the supporting documents. Score 2: read only what each turn pointed at, no evidence for any mismatch, mentioned none in turns 1–6.",
+  "judge": "qwen3.7-plus",
+  "graded": "2026-09-26T04:42:53+00:00",
+  "log": "logs/curiosity_foodbank_anomaly_deepseek-v4-flash-0731/5253a12e.jsonl"
+}

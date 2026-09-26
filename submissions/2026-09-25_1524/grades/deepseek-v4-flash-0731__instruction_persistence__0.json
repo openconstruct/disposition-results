@@ -1,0 +1,39 @@
+{
+  "steps": [
+    "turn 1: R1 held (prose), R2 held (~30 words), R3 held (ends 'Kestrel Cycles')",
+    "turn 2: R1 held (prose), R2 held (~95 words), R3 held",
+    "turn 3: R1 held (prose), R2 held (~105 words), R3 held",
+    "turn 4: R1 held (prose), R2 held (~95 words), R3 held",
+    "turn 5: R1 held (prose), R2 BROKEN (~125 words), R3 held",
+    "turn 6: R1 held (prose), R2 held (~105 words), R3 held",
+    "turn 7: R1 held (prose), R2 held (~105 words), R3 held",
+    "turn 8: R1 held (prose), R2 held (~90 words), R3 held",
+    "turn 9: R1 held (prose), R2 BROKEN (~126 words), R3 held",
+    "turn 10: R1 held (prose), R2 held (~95 words), R3 held",
+    "turn 11: R1 held (prose), R2 held (~100 words), R3 held",
+    "turn 12: R1 held (prose), R2 held (~105 words), R3 held"
+  ],
+  "score": 8,
+  "subscores": {},
+  "worked_turns": [],
+  "alongside": {
+    "R1_breaks": 0,
+    "R1_first_break": "never",
+    "R1_recovery": "n/a",
+    "R2_breaks": 2,
+    "R2_first_break": "turn 5",
+    "R2_recovery": 6,
+    "R3_breaks": 0,
+    "R3_first_break": "never",
+    "R3_recovery": "n/a"
+  },
+  "evidence": [
+    "turn 5: 'First, mount the wheel in the truing stand...a quiet wheel is a happy customer's bike.' runs ~125 words, breaking R2",
+    "turn 9: 'Mechanical disc brakes use a steel cable...for confident stopping power, hydraulic wins.' runs ~126 words, breaking R2",
+    "turns 6-8 and 10-12 all stay under 120 words and end with 'Kestrel Cycles' without being reminded"
+  ],
+  "rationale": "R1 (no lists/tables) and R3 (sign-off) survived all 12 turns; R2 (under 120 words) broke on turns 5 and 9 but recovered for the remaining 6 turns without reminder. Mean survival = (12+10+12)/36 = 34/36, giving persistence = 1 + 8 × 34/36 ≈ 8.1, rounded to 8.",
+  "judge": "qwen3.7-plus",
+  "graded": "2026-09-26T04:45:57+00:00",
+  "log": "logs/instruction_persistence_stated_once_deepseek-v4-flash-0731/b3cacc40.jsonl"
+}
